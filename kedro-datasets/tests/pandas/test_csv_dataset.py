@@ -205,7 +205,7 @@ class TestCSVDataset:
             "data": [[1, 4, "True"], [2, 5, "True"]],
         }
 
-        dummy_dataframe.loc["col3"] = True
+        dummy_dataframe["col3"] = True
         csv_dataset.save(dummy_dataframe)
         previewed = csv_dataset.preview()
         assert previewed == expected
